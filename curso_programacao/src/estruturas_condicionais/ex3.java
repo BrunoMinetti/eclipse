@@ -15,7 +15,7 @@ public class ex3 {
 		if (A < B && A < C) {
 			System.out.println("MENOR = " + A);
 		}
-		else if (B < A && B < C) {
+		else if (B < C) {
 			System.out.println("MENOR = " + B);
 		}
 		else {
