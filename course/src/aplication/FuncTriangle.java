@@ -34,14 +34,15 @@ public class FuncTriangle {
 		compare.nome2 = y.nome;
 		compare.valor2 = y.area();
 		
+		x.showPerimeterTriangle();
+		y.showPerimeterTriangle();
+		
 		x.showAreaTriangle();
 		y.showAreaTriangle();
 		
-		x.equilateral();
-		y.equilateral();
 		
-		x.retangle();
-		y.retangle();
+		x.triangleType();
+		y.triangleType();
 		
 		compare.showMajor();
 		compare.showMinor();
