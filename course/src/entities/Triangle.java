@@ -5,6 +5,15 @@ public class Triangle {
 	public double a, b, c, area, per;
 	public String nome;
 	
+	public boolean condicaoExistencia() {
+		if (Math.abs(b - c) < a && a < (b + c) && Math.abs(a - c) < b && b <( a + c) && Math.abs(a - b) < c && c < (a + b)) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
 	public double perimeter() {
 		per = a + b + c;
 		return per;

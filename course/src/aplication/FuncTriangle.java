@@ -29,24 +29,26 @@ public class FuncTriangle {
 		y.c = sc.nextDouble();
 		y.nome = sc.next();
 		
-		compare.nome1 = x.nome;
-		compare.valor1 = x.area();
-		compare.nome2 = y.nome;
-		compare.valor2 = y.area();
-		
-		x.showPerimeterTriangle();
-		y.showPerimeterTriangle();
-		
-		x.showAreaTriangle();
-		y.showAreaTriangle();
-		
-		
-		x.triangleType();
-		y.triangleType();
-		
-		compare.showMajor();
-		compare.showMinor();
-		
+		if (x.condicaoExistencia() && y.condicaoExistencia()) {
+			compare.nome1 = x.nome;
+			compare.valor1 = x.area();
+			compare.nome2 = y.nome;
+			compare.valor2 = y.area();
+			
+			x.showPerimeterTriangle();
+			y.showPerimeterTriangle();
+			
+			x.showAreaTriangle();
+			y.showAreaTriangle();
+			
+			
+			x.triangleType();
+			y.triangleType();
+			
+			compare.showMajor();
+			compare.showMinor();
+			}
+		else System.out.println("Pelo menos um do Triangulos possui parâmetros incorretos");
 		sc.close();
 	}
 }
