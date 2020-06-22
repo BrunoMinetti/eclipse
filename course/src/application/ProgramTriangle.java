@@ -1,4 +1,4 @@
-package aplication;
+package application;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import entities.Triangle;
 
 
 
-public class Program {
+public class ProgramTriangle {
 
 	public static void main(String[] args) {
 		
