@@ -15,7 +15,7 @@ public class ProgramBank {
 		System.out.print("Enter account number: ");
 		int number = sc.nextInt();		
 		System.out.print("Enter account holder: ");
-		sc.nextLine();
+		sc.nextLine();//serve para consumir a quebra de linha do nextInt anterior
 		String holder = sc.nextLine();
 		System.out.print("Is there na initial deposit (y/n)? ");
 		char response = sc.next().charAt(0);
