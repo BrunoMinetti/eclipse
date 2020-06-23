@@ -3,7 +3,7 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Student;
+import entities.Student_;
 
 public class ProgramStudant {
 
@@ -11,7 +11,7 @@ public class ProgramStudant {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		Student aluno = new Student();
+		Student_ aluno = new Student_();
 		
 		aluno.name = sc.nextLine();
 		aluno.grade1 = sc.nextDouble();

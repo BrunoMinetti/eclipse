@@ -1,19 +1,32 @@
 package entities;
 
 public class Student {
-	
-	public String name;
-	public double grade1, grade2, grade3;
-	
-	public double finalGrade() {
-		return grade1 + grade2 + grade3;
+	private String name, email;
+
+
+	public Student(String name, String email) {
+		this.name = name;
+		this.email = email;
 	}
-	public double missingPoints() {
-		if (finalGrade() < 60.0) {
-			return 60.0 - finalGrade();
-		}
-		else {
-			return 0.0;
-		}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	
+	public String toString() {
+		return name + ", " + email;
 	}
 }
