@@ -3,7 +3,7 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Employee;
+import entities.Employee_;
 
 public class ProgramFuncionario {
 
@@ -11,7 +11,7 @@ public class ProgramFuncionario {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		Employee func = new Employee();
+		Employee_ func = new Employee_();
 		
 		System.out.print("Name: ");
 		func.name = sc.nextLine();
