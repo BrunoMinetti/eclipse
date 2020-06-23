@@ -7,26 +7,21 @@ public class Account {
 	private String holder;
 	private double balance;
 	
-	public Account(int number, String holder, double balance) {
-		super();
-		this.number = number;
-		this.holder = holder;
-		this.balance = balance;
-	}
 	public Account(int number, String holder) {
-		super();
 		this.number = number;
 		this.holder = holder;
 	}
 	
+	public Account(int number, String holder, double initialDeposit) {
+		this.number = number;
+		this.holder = holder;
+		deposit(initialDeposit);
+	}
+		
 	public int getNumber() {
 		return number;
 	}
-
-	public void setNumber(int number) {
-		this.number = number;
-	}
-
+	
 	public String getHolder() {
 		return holder;
 	}
@@ -42,8 +37,9 @@ public class Account {
 	public void deposit(double amount) {
 		this.balance += amount;
 	}
+	
 	public void withdraw(double amount) {
-		this.balance -= (amount + TAX);
+		this.balance -= amount + TAX;
 	}
 	public String toString() {
 		return "Account "
