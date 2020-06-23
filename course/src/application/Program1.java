@@ -4,16 +4,18 @@ public class Program1 {
 
 	public static void main(String[] args) {
 
-		int x = 20;
+		String [] vect = new String[] {"Maria", "Bob", "Alex"};
 		
-		Integer obj = x;
+		for (int i = 0; i < vect.length; i++) {
+			System.out.println(vect[i]);
+		}
 		
-		System.out.println(obj);
-		
-		int y = obj * 2;
-		
-		System.out.println(y);
+		System.out.println("--------------------");
+		for(String obj : vect) {
+			System.out.println(obj);
+		}
 
 	}
 
 }
+
