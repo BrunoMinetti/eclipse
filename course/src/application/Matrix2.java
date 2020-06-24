@@ -32,6 +32,7 @@ public class Matrix2 {
 					System.out.println("Up: " + mat[i+1][j]);
 					System.out.println("Right: " + mat[i][j+1]);
 					System.out.println("Down: " + mat[i-1][j]);
+					
 				}
 			}
 		}
