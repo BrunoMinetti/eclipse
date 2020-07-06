@@ -3,7 +3,7 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Product;
+import entities.Product1;
 
 public class Program {
 
@@ -16,7 +16,7 @@ public class Program {
 		String name = sc.nextLine();
 		System.out.print("Price: ");
 		double price = sc.nextDouble();		
-		Product product = new Product(name, price);
+		Product1 product = new Product1(name, price);
 		
 		System.out.println();
 		System.out.println("Product data: " + product);
