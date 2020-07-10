@@ -14,7 +14,7 @@ public class Order {
 	private Client client;
 	private List<OrderItem> items = new ArrayList<>();
 	
-	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
 	public Order() {
 	}
@@ -60,7 +60,7 @@ public class Order {
 	public Double total() {
 		double sum = 0;
 		for(OrderItem item : items) {
-			sum += item.getQuantity();
+			sum += item.subTotal();
 		}
 		return sum;
 	}
