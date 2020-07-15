@@ -4,6 +4,7 @@ public class OrderItem {
 	
 	private Integer quantity;
 	private Double price;
+	
 	private Product product;
 	
 	public OrderItem() {
@@ -45,7 +46,7 @@ public class OrderItem {
 
 	@Override
 	public String toString() {
-		return product + ", " + quantity +" SubTotal: $" + String.format("%.2f", subTotal());
+		return product + ", $" + "Quantity: " + quantity +" SubTotal: $" + String.format("%.2f", subTotal());
 	}
 	
 	

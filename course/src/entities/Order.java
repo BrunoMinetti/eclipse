@@ -11,6 +11,7 @@ public class Order {
 	
 	private Date moment;
 	private OrderStatus status;
+	
 	private Client client;
 	private List<OrderItem> items = new ArrayList<>();
 	
@@ -57,8 +58,8 @@ public class Order {
 		return items;
 	}
 	
-	public Double total() {
-		double sum = 0;
+	public double total() {
+		double sum = 0.0;
 		for(OrderItem item : items) {
 			sum += item.subTotal();
 		}
@@ -78,7 +79,7 @@ public class Order {
 		for(OrderItem item : items) {
 			sb.append(item +"\n");
 		}
-		sb.append("Total price: ");
+		sb.append("Total price: $");
 		sb.append(String.format("%.2f", total()));
 		return sb.toString();
 	}
