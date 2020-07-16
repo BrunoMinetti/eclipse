@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Employee;
+import entities.Employee_1;
 
 public class ProgramCompany {
 
@@ -14,7 +14,7 @@ public class ProgramCompany {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		List<Employee> list = new ArrayList<>();
+		List<Employee_1> list = new ArrayList<>();
 		
 		System.out.print("How many employees will be registered? ");
 		int N = sc.nextInt();
@@ -36,14 +36,14 @@ public class ProgramCompany {
 			String name = sc.nextLine();
 			System.out.print("Salary: ");
 			Double salary = sc.nextDouble();
-			Employee emp = new Employee(id, name, salary);
+			Employee_1 emp = new Employee_1(id, name, salary);
 			list.add(emp);
 		}
 		
 		System.out.println();
 		System.out.print("Enter the employee id that will have salary increase : ");
 		int idSalary = sc.nextInt();
-		Employee emp = list.stream().filter(x -> x.getId() == idSalary).findFirst().orElse(null);
+		Employee_1 emp = list.stream().filter(x -> x.getId() == idSalary).findFirst().orElse(null);
 		//Integer pos = position(list, idSalary);
 		if (emp == null) {
 			System.out.println("This id does not exist!");
@@ -56,13 +56,13 @@ public class ProgramCompany {
 		
 		System.out.println();
 		System.out.println("List of employees:");
-		for (Employee e : list) {
+		for (Employee_1 e : list) {
 			System.out.println(e);
 		}
 		
 		sc.close();
 	}
-	public static Integer position(List<Employee> list, int id) {
+	public static Integer position(List<Employee_1> list, int id) {
 		for (int i = 0; i < list.size(); i++) {
 			if (list.get(i).getId() == id) {
 				return i;
@@ -71,8 +71,8 @@ public class ProgramCompany {
 		return null;
 	}
 	
-	public static boolean hasId(List<Employee> list, int id) {
-		Employee emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+	public static boolean hasId(List<Employee_1> list, int id) {
+		Employee_1 emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
 		return emp != null;
 	}
 }
