@@ -11,8 +11,10 @@ import entities.OutsourcedEmployee;
 public class ProgramEmployee {
 
 	public static void main(String[] args) {
+		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
+		
 		List <Employee> list = new ArrayList<>();
 		
 		System.out.print("Enter the number of employees: ");
@@ -32,18 +34,16 @@ public class ProgramEmployee {
 			if (typeEmployee == 'y') {
 				System.out.print("Additional charge: ");
 				Double additionalCharge = sc.nextDouble();
-				Employee emp = new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge);
-				list.add(emp);
+				list.add(new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge));
 			}
 			else {
-				Employee emp = new Employee(name, hours, valuePerHour);
-				list.add(emp);
+				list.add(new Employee(name, hours, valuePerHour));
 			}
 		
 		}
 		System.out.println();
-		for (Employee item: list) {
-			System.out.println(item.getName() + " - $ " + String.format("%.2f", item.payment()));
+		for (Employee emp: list) {
+			System.out.println(emp.getName() + " - $ " + String.format("%.2f", emp.payment()));
 		}
 		
 		sc.close();
