@@ -43,10 +43,13 @@ public class Program {
 		}
 		System.out.println();
 		System.out.println("TAXES PAID:");
+		for(TaxPayer taxPayer : list) {
+			System.out.println(taxPayer);
+		}
+		
 		double sum = 0.0;
 		for(TaxPayer taxPayer : list) {
 			sum += taxPayer.tax();
-			System.out.println(taxPayer);
 		}
 		System.out.println();
 		System.out.printf("TOTAL TAXES: %.2f%n", sum);
