@@ -43,7 +43,13 @@ public class Program {
 		}
 		System.out.println();
 		System.out.println("TAXES PAID:");
+<<<<<<< HEAD
 		for(TaxPayer taxPayer : list) {
+=======
+		
+		for(TaxPayer taxPayer : list) {
+			
+>>>>>>> branch 'master' of https://github.com/BrunoMinetti/eclipse.git
 			System.out.println(taxPayer);
 		}
 		
@@ -51,6 +57,7 @@ public class Program {
 		for(TaxPayer taxPayer : list) {
 			sum += taxPayer.tax();
 		}
+		
 		System.out.println();
 		System.out.printf("TOTAL TAXES: %.2f%n", sum);
 	
