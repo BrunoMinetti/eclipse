@@ -7,6 +7,21 @@ public class ProgramException {
 
 	public static void main(String[] args) {
 
+		method1();		
+		
+		System.out.println("End of program");
+	}
+	
+	public static void method1() {
+		System.out.println("***METHOD01 START***");
+		method2();
+		System.out.println("***METHOD1 END***");
+	}
+	
+	public static void method2() {
+		
+		System.out.println("***METHOD2 START***");
+		
 		Scanner sc = new Scanner(System.in);
 		
 		try {
@@ -16,26 +31,15 @@ public class ProgramException {
 		}
 		catch (ArrayIndexOutOfBoundsException e){
 			System.out.println("Invalid Position! ");
+			e.printStackTrace();
+			sc.next();
 		}
 		catch (InputMismatchException e){
 			System.out.println("This is not a number! ");
 		}
 		
-		int n = sc.nextInt();
-		int m = sc.nextInt();
-		try {
-			double r = n/m;
-			System.out.println(r);
-		}
-		catch (ArithmeticException e) {
-			System.out.println("Divisão impossível!");
-		}
-		
-		
-		
-		System.out.println("End of program");
-		
 		sc.close();
+		System.out.println("***METHOD2 END***");
 	}
-
 }
+
